@@ -52,7 +52,7 @@ class SignIn extends StatelessWidget {
                             color: Colors.white,
                             decoration: TextDecoration.none,
                             fontFamily: AutofillHints.countryName,
-                            fontWeight: FontWeight.w800),
+                            fontWeight: FontWeight.w700),
                       ),
                     ),
                     const SizedBox(
