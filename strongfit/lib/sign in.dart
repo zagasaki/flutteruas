@@ -12,7 +12,6 @@ class SignIn extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/background2.jpg"),
                   fit: BoxFit.fill)),
-
           child: Scaffold(
               backgroundColor: Colors.transparent,
               body: Center(
@@ -58,6 +57,8 @@ class SignIn extends StatelessWidget {
                     const SizedBox(
                       height: 50,
                     ),
+
+                    //Sign in button
                     SizedBox(
                       width: 250,
                       height: 50,
@@ -111,12 +112,6 @@ class SignIn extends StatelessWidget {
                   ],
                 ),
               )),
-          // child: const Column(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-
-          //   ],
-          // ),
         ));
   }
 }
