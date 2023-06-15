@@ -40,7 +40,7 @@ class SignIn extends StatelessWidget {
                             color: Colors.white,
                             decoration: TextDecoration.none,
                             fontFamily: AutofillHints.countryName,
-                            fontWeight: FontWeight.w900),
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     Container(
@@ -51,7 +51,7 @@ class SignIn extends StatelessWidget {
                             color: Colors.white,
                             decoration: TextDecoration.none,
                             fontFamily: AutofillHints.countryName,
-                            fontWeight: FontWeight.w700),
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     const SizedBox(

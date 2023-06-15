@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:strongfit/schedule.dart';
+// ignore: unused_import
 import 'package:strongfit/sign%20in.dart';
+import 'package:strongfit/sign%20up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SignIn(),
+      home: Schedule(),
       debugShowCheckedModeBanner: false,
     );
   }
