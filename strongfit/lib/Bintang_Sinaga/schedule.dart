@@ -54,10 +54,10 @@ class _ScheduleState extends State<Schedule> {
                 decoration: const BoxDecoration(color: Colors.transparent),
                 height: 100,
                 width: double.infinity,
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -76,7 +76,7 @@ class _ScheduleState extends State<Schedule> {
                         )
                       ],
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -95,7 +95,7 @@ class _ScheduleState extends State<Schedule> {
                         )
                       ],
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -114,26 +114,38 @@ class _ScheduleState extends State<Schedule> {
                         )
                       ],
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "18",
-                          style: TextStyle(
-                              color: Colors.yellow,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        Text(
-                          "Thu",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700),
-                        )
-                      ],
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Colors.grey, Colors.white],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          border: Border.all(),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "18",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          Text(
+                            "Thu",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700),
+                          )
+                        ],
+                      ),
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -152,7 +164,7 @@ class _ScheduleState extends State<Schedule> {
                         )
                       ],
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -171,7 +183,7 @@ class _ScheduleState extends State<Schedule> {
                         )
                       ],
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -194,6 +206,7 @@ class _ScheduleState extends State<Schedule> {
                 ),
               ),
               Container(
+                margin: const EdgeInsets.only(top: 10),
                 padding: const EdgeInsets.all(10),
                 width: 300,
                 height: 200,

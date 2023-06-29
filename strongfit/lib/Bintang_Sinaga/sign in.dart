@@ -19,7 +19,7 @@ class SignIn extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                      child: Text(
+                      child: const Text(
                         "Track Your Progress",
                         style: TextStyle(
                           fontSize: 35,
@@ -29,11 +29,11 @@ class SignIn extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
-                      child: Text(
+                      child: const Text(
                         "Reach give you a journal to track your",
                         style: TextStyle(
                             fontSize: 15,
@@ -44,7 +44,7 @@ class SignIn extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      child: Text(
+                      child: const Text(
                         "progress and compare your old and new self",
                         style: TextStyle(
                             fontSize: 15,
@@ -64,6 +64,12 @@ class SignIn extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            shadowColor: Colors.amber,
+                            elevation: 3,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10))),
                         child: const Text(
                           "Sign In",
                           style: TextStyle(
@@ -71,15 +77,9 @@ class SignIn extends StatelessWidget {
                               color: Colors.black,
                               fontWeight: FontWeight.w900),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            shadowColor: Colors.amber,
-                            elevation: 3,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10))),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -87,7 +87,7 @@ class SignIn extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Don't have account?",
                             style: TextStyle(
                               fontSize: 15,
@@ -96,7 +96,7 @@ class SignIn extends StatelessWidget {
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "Sign Up",
                                 style: TextStyle(
                                   fontSize: 15,
