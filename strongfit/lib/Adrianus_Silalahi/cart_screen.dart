@@ -12,23 +12,23 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffb28242c),
+        backgroundColor: const Color(0xffb28242c),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                 )),
-            Text(
+            const Text(
               "C A R T",
               style: TextStyle(color: Colors.white),
             ),
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.delete,
                   color: Colors.white,
                 )),
@@ -41,30 +41,31 @@ class _CartScreenState extends State<CartScreen> {
             //Main
             Expanded(
                 child: Container(
-              decoration: BoxDecoration(color: Colors.black87),
+              decoration: const BoxDecoration(color: Colors.black87),
               child: Column(
                 children: [
                   //Produk
                   Container(
                     decoration: BoxDecoration(color: Colors.grey[700]),
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 6),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.check_box_outline_blank,
                               color: Colors.white,
                             ),
-                            Container(
+                            SizedBox(
                               width: 120,
                               height: 90,
                               child: Image.network(
                                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY-xFPkslDc7wPZaCSZoKF_ZvKe4EIGA6jQQ&usqp=CAU",
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                                 width: 125,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +82,7 @@ class _CartScreenState extends State<CartScreen> {
                                 )),
                           ],
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Icon(
@@ -113,8 +114,8 @@ class _CartScreenState extends State<CartScreen> {
 
             //Total belanjaan
             Container(
-              decoration: BoxDecoration(color: Color(0xffb28242c)),
-              padding: EdgeInsets.symmetric(horizontal: 35, vertical: 20),
+              decoration: const BoxDecoration(color: Color(0xffb28242c)),
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -125,7 +126,7 @@ class _CartScreenState extends State<CartScreen> {
                         "Total",
                         style: TextStyle(color: Colors.grey[350]),
                       ),
-                      Text("Rp 440.000",
+                      const Text("Rp 440.000",
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold))
                     ],
@@ -133,9 +134,10 @@ class _CartScreenState extends State<CartScreen> {
                   Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 199, 103, 216),
+                        backgroundColor:
+                            const Color.fromARGB(255, 199, 103, 216),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Checkout",
                         style: TextStyle(color: Colors.white),
                       ),
