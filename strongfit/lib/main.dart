@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:strongfit/schedule.dart';
+import 'package:strongfit/Bintang_Sinaga/schedule.dart';
 // ignore: unused_import
-import 'package:strongfit/sign%20in.dart';
-import 'package:strongfit/sign%20up.dart';
+import 'package:strongfit/Bintang_Sinaga/sign%20in.dart';
+import 'package:strongfit/Bintang_Sinaga/sign%20up.dart';
 
 void main() {
   runApp(const MyApp());
