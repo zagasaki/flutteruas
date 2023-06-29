@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:strongfit/Bintang_Sinaga/schedule.dart';
+import 'package:strongfit/Bintang_Sinaga/Trainer.dart';
 // ignore: unused_import
 import 'package:strongfit/Bintang_Sinaga/sign%20in.dart';
-import 'package:strongfit/Bintang_Sinaga/sign%20up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Schedule(),
+      home: const Trainer(),
       debugShowCheckedModeBanner: false,
     );
   }
