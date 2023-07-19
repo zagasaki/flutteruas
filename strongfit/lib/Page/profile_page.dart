@@ -1,39 +1,6 @@
-// class MyHomePage extends StatelessWidget {
-
-//   final double topWidgetHeight = 200.0;
-//   final double avatarRadius = 50.0;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return  Scaffold(
-//       body:  Stack(
-//         children: <Widget>[
-//            Column(
-//             children: <Widget>[
-//                Container(
-//                 height: topWidgetHeight,
-//                 color: Colors.yellow,
-//               ),
-//                Container(
-//                 color: Colors.red,
-//               )
-//             ],
-//           ),
-//            Positioned(
-//             child:  CircleAvatar(
-//               radius: avatarRadius,
-//               backgroundColor: Colors.green,
-//             ),
-//             left: (MediaQuery.of(context).size.width/2) - avatarRadius,
-//             top: topWidgetHeight - avatarRadius,
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
-
+import 'package:basic/Provider/Provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -47,8 +14,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     final double topWidgetHeight = 200.0;
     final double avatarRadius = 68.0;
-
+    final provTugas2 = context.watch<ProviderTugas2>();
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Color.fromARGB(250, 28, 23, 33),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+      ),
       body: Stack(
         children: <Widget>[
           Column(
@@ -61,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 160,
+                      width: 200,
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -103,13 +77,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         TextField(
                           style: TextStyle(color: Colors.white),
                           controller: TextEditingController(
-                            text: "********",
+                            text: provTugas2.password,
                           ),
+                          obscureText: provTugas2.dataCurrentObsPassword,
                           decoration: InputDecoration(
                               labelText: "YOUR PASSWORD",
                               labelStyle: TextStyle(color: Colors.blueGrey),
                               suffix: ElevatedButton(
-                                  onPressed: () {}, child: Text("Change"))),
+                                  onPressed: () {
+                                    provTugas2.setObsPassword =
+                                        !provTugas2.dataCurrentObsPassword;
+                                  },
+                                  child: Text("Show"))),
                         ),
                         TextField(
                           style: TextStyle(color: Colors.white),

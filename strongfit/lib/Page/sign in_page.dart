@@ -1,3 +1,4 @@
+import 'package:basic/Page/login_page.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -63,7 +64,10 @@ class SignIn extends StatelessWidget {
                       width: 250,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
+                        },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             shadowColor: Colors.amber,
