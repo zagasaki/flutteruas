@@ -1,3 +1,4 @@
+import 'package:basic/Page/register_page.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -35,7 +36,7 @@ class SignUp extends StatelessWidget {
                 ),
                 Container(
                   child: const Text(
-                    "Chose your favorite fitness guru",
+                    "Chose your favorite fitness trainer",
                     style: TextStyle(
                         fontSize: 15,
                         color: Colors.white,
@@ -64,7 +65,10 @@ class SignUp extends StatelessWidget {
                   width: 250,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Register()));
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                         shadowColor: Colors.amber,

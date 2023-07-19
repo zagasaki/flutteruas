@@ -1,10 +1,13 @@
+import 'package:basic/Page/sign%20up_page.dart';
+import 'package:basic/Provider/Provider.dart';
 import 'package:flutter/material.dart';
-import 'package:strongfit/Bintang_Sinaga/Trainer.dart';
-// ignore: unused_import
-import 'package:strongfit/Bintang_Sinaga/sign%20in.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    //Provider tugas-2
+    ChangeNotifierProvider(create: (_) => ProviderTugas2())
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -34,8 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Trainer(),
-      debugShowCheckedModeBanner: false,
+      home: const SignUp(),
     );
   }
 }
