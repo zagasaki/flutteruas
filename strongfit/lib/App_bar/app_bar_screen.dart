@@ -14,8 +14,8 @@ class AppBarScreen extends StatelessWidget {
     var dateFormat = DateFormat.yMMMEd().format(date);
     return ListTile(
       leading: IconButton(
-        icon: Image.network(
-          "https://cdn-icons-png.flaticon.com/128/2202/2202112.png",
+        icon: Image.asset(
+          "assets/profile.png",
         ),
         iconSize: 50,
         onPressed: () {
@@ -29,12 +29,12 @@ class AppBarScreen extends StatelessWidget {
           children: [
             Text(
               "Halo ${provTugas2.username}!",
-              style: TextStyle(color: Colors.white38),
+              style: const TextStyle(color: Colors.white38),
             ),
             Text(
               dateFormat,
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ],
         ),

@@ -128,8 +128,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             top: topWidgetHeight - avatarRadius - 40,
             child: CircleAvatar(
               radius: avatarRadius,
-              child: Image.network(
-                  "https://cdn-icons-png.flaticon.com/128/2202/2202112.png"),
+              child: Image.asset("assets/profile.png"),
             ),
           )
         ],
