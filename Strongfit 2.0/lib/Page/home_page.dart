@@ -11,10 +11,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(color: Colors.black87),
+      decoration: BoxDecoration(color: Colors.black87),
       child: Column(
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 50),
             child: Center(
               child: Column(
@@ -36,28 +36,27 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 15, vertical: 7.5),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 7.5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Expanded(
                       child: Container(
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(244, 238, 238, 228),
+                        color: Color.fromARGB(244, 238, 238, 228),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
-                      child: SizedBox(
+                      child: Container(
                         width: 150,
                         height: 370,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.calendar_month,
                               size: 100,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Text(
@@ -70,16 +69,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   )),
-                  const SizedBox(
+                  SizedBox(
                     width: 15,
                   ),
                   Expanded(
                       child: Container(
                     decoration: BoxDecoration(
-                        color: const Color(0xffe8dcf4),
+                        color: Color(0xffe8dcf4),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
-                      child: SizedBox(
+                      child: Container(
                         width: 150,
                         height: 370,
                         child: Column(
@@ -89,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                               "https://cdn-icons-png.flaticon.com/128/7439/7439276.png",
                               height: 100,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Text(
@@ -108,18 +107,17 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 15, vertical: 7.5),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 7.5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Expanded(
                       child: Container(
                     decoration: BoxDecoration(
-                        color: const Color(0xffe0c4dc),
+                        color: Color(0xffe0c4dc),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
-                      child: SizedBox(
+                      child: Container(
                         width: 150,
                         height: 370,
                         child: Column(
@@ -129,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                               "https://cdn-icons-png.flaticon.com/128/5455/5455768.png",
                               height: 100,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Text(
@@ -142,16 +140,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   )),
-                  const SizedBox(
+                  SizedBox(
                     width: 15,
                   ),
                   Expanded(
                       child: Container(
                     decoration: BoxDecoration(
-                        color: const Color(0xffe8f4fc),
+                        color: Color(0xffe8f4fc),
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
-                      child: SizedBox(
+                      child: Container(
                         width: 150,
                         height: 370,
                         child: Column(
@@ -161,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                               "https://cdn-icons-png.flaticon.com/128/4257/4257086.png",
                               height: 100,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 15,
                             ),
                             Text(
@@ -178,7 +176,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 100,
           )
         ],

@@ -1,4 +1,3 @@
-import 'package:basic/Page/aboutus.dart';
 import 'package:basic/Provider/Provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,14 +12,14 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    const double topWidgetHeight = 200.0;
-    const double avatarRadius = 68.0;
+    final double topWidgetHeight = 200.0;
+    final double avatarRadius = 68.0;
     final provTugas2 = context.watch<ProviderTugas2>();
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: const Color.fromARGB(250, 28, 23, 33),
-        iconTheme: const IconThemeData(
+        backgroundColor: Color.fromARGB(250, 28, 23, 33),
+        iconTheme: IconThemeData(
           color: Colors.white,
         ),
       ),
@@ -32,26 +31,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: 190,
                 width: double.infinity,
                 decoration:
-                    const BoxDecoration(color: Color.fromARGB(255, 58, 10, 51)),
+                    BoxDecoration(color: Color.fromARGB(255, 58, 10, 51)),
                 child: Row(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       width: 200,
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('${provTugas2.username}',
-                            style: const TextStyle(
+                        Text("Adrianus Silalahi",
+                            style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold)),
-                        const Text(
+                        Text(
                           "+62895-1232-6689",
                           style: TextStyle(color: Colors.grey),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 10,
                         )
                       ],
@@ -61,75 +60,58 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Expanded(
                 child: Container(
-                    decoration: const BoxDecoration(color: Colors.black87),
+                    decoration: BoxDecoration(color: Colors.black87),
                     alignment: Alignment.center,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 40),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
                     child: Column(
                       children: [
                         TextField(
-                          style: const TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white),
                           controller: TextEditingController(
-                            text: "${provTugas2.email}",
+                            text: "adrianus766@gmail.com",
                           ),
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                               labelText: 'YOUR EMAIL',
                               labelStyle: TextStyle(color: Colors.blueGrey)),
                         ),
                         TextField(
-                          style: const TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white),
                           controller: TextEditingController(
                             text: provTugas2.password,
                           ),
                           obscureText: provTugas2.dataCurrentObsPassword,
                           decoration: InputDecoration(
                               labelText: "YOUR PASSWORD",
-                              labelStyle:
-                                  const TextStyle(color: Colors.blueGrey),
+                              labelStyle: TextStyle(color: Colors.blueGrey),
                               suffix: ElevatedButton(
                                   onPressed: () {
                                     provTugas2.setObsPassword =
                                         !provTugas2.dataCurrentObsPassword;
                                   },
-                                  child: const Text("Show"))),
+                                  child: Text("Show"))),
                         ),
                         TextField(
-                          style: const TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white),
                           controller: TextEditingController(
                             text: "Medan/Indonesia",
                           ),
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                               labelText: 'CITY/COUNTRY',
                               labelStyle: TextStyle(color: Colors.blueGrey)),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const AboutUsPage(),
-                                  ));
-                            },
-                            child: const Text(
-                              "About Us",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 25),
-                            ))
                       ],
                     )),
               ),
             ],
           ),
           Positioned(
-            left: (MediaQuery.of(context).size.width / 2) - avatarRadius - 110,
-            top: topWidgetHeight - avatarRadius - 40,
             child: CircleAvatar(
               radius: avatarRadius,
-              child: Image.asset("assets/profile.png"),
+              child: Image.network(
+                  "https://cdn-icons-png.flaticon.com/128/2202/2202112.png"),
             ),
+            left: (MediaQuery.of(context).size.width / 2) - avatarRadius - 110,
+            top: topWidgetHeight - avatarRadius - 40,
           )
         ],
       ),
